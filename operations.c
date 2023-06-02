@@ -1,43 +1,34 @@
 #include "main.h"
 
-int add(int x, int y)
+void *add(void *x, void *y)
 {
-    return (x + y);
-}
-
-
-Node *add_(Node *x, Node *y)
-{
+    Node *a = (Node *)x;
+    if (y == NULL)
+        return (fib(x));
+    Node *b = (Node *)y;
     Node *result = malloc(sizeof(Node));
-    result->type = x->type + y->type;
-    free(x);
-    free(y);
+    result->type = a->type + b->type;
     return (result);
 }
 
-Node *add__(int argcount, ...)
+void *mul(void *x, void *y)
 {
-    va_list ap;
-    va_start(ap, argcount);
-
-    Node *a = va_arg(ap, Node *);
-    Node *b = va_arg(ap, Node *);
-    va_end(ap);
-
+    Node *a = (Node *)x;
+    if (y == NULL)
+        return (fib(x));
+    Node *b = (Node *)y;
     Node *result = malloc(sizeof(Node));
-    result->type = b->type;
-
-    return result;
-
+    result->type = a->type * b->type;
+    return (result);
 }
 
-// Node *mul(Node *x, Node *y)
-// {
-//     return (x * y);
-// }
-
-// Node *sub(Node *x, Node *y)
-// {
-//     return (x - y);
-// }
-
+void *sub(void *x, void *y)
+{
+    Node *a = (Node *)x;
+    if (y == NULL)
+        return (fib(x));
+    Node *b = (Node *)y;
+    Node *result = malloc(sizeof(Node));
+    result->type = a->type - b->type;
+    return (result);
+}
