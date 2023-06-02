@@ -19,11 +19,13 @@ main()
     calc(add);
     calc(mul);
     calc(sub);
+    calc(fibo);
 }
 Output
 add : 16
 mul : 20
 sub : -4
+fibo : 2
 
 
 
