@@ -12,7 +12,7 @@ Below is an overview of the files in this dir:
 Filename	|	Description
 ---------------	|------------------
 task_2.c |	This files contains three functions, each being an implementation of the problem function specified above. 
-diff.md | This gives and explaination on the differences between the 3 implementations of the problem function.
+DIFF.md | This gives and explaination on the differences between the 3 implementations of the problem function.
 README.md | Gives a description on the project.
 
 ## Technologies / Environment
